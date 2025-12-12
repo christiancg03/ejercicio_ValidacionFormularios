@@ -91,6 +91,18 @@ function Nav() {
           Intérpretes
         </NavLink>
 
+          <NavLink
+          to="/formularioagrupado"
+          onClick={closeMenu}
+          className={({ isActive }) =>
+            isActive
+              ? "font-bold underline block"
+              : "hover:underline block"
+          }
+        >
+          Formulario
+        </NavLink>
+
         <NavLink
           to="/admin"
           onClick={closeMenu}
