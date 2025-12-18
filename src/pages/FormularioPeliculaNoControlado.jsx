@@ -12,7 +12,11 @@ function FormularioPeliculaNoControlado() {
     e.preventDefault();
     const datos = {
       nombre: nombreRef.current.value,
-      email: emailRef.current.value,
+      director: directorRef.current.value,
+      clasificacion: clasificacionRef.current.value,
+      recaudacion: recaudacionRef.current.value,
+      nota: notaRef.current.value,
+      cartelera: carteleraRef.current.value,
     };
     console.log("Datos enviados:", datos);
   }
