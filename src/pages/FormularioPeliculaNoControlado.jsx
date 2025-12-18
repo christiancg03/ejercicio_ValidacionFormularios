@@ -28,7 +28,7 @@ function FormularioPeliculaNoControlado() {
         className="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md"
       >
         <div className="text-2xl font-bold mb-6 text-gray-800 border-b pb-2">
-          Formulario &quot;No Controlado&quot;
+          Formulario No Controlado&quot;Películas&quot;
         </div>
 
         <div className="mb-4">
@@ -41,22 +41,83 @@ function FormularioPeliculaNoControlado() {
           <input
             id="nombre"
             type="text"
-            ref={nombreRef} 
+            ref={nombreRef}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
         </div>
 
         <div className="mb-6">
           <label 
-            htmlFor="email" 
+            htmlFor="director" 
             className="block text-sm font-medium text-gray-700 mb-1"
           >
-            Email:
+            Director:
           </label>
           <input 
-            id="email"
-            type="email"
-            ref={emailRef} 
+            id="director"
+            type="text"
+            ref={directorRef} 
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
+          />
+        </div>
+
+        <div className="mb-6">
+          <label 
+            htmlFor="clasificacion" 
+            className="block text-sm font-medium text-gray-700 mb-1"
+          >
+            Clasificación:
+          </label>
+          <input 
+            id="clasificacion"
+            type="text"
+            ref={clasificacionRef} 
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
+          />
+        </div>
+
+        <div className="mb-6">
+          <label 
+            htmlFor="recaudacion" 
+            className="block text-sm font-medium text-gray-700 mb-1"
+          >
+            Recaudación:
+          </label>
+          <input 
+            id="recaudacion"
+            type="text"
+            ref={recaudacionRef}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
+          />
+        </div>
+
+        <div className="mb-6">
+          <label 
+            htmlFor="nota" 
+            className="block text-sm font-medium text-gray-700 mb-1"
+          >
+            Nota:
+          </label>
+          <input 
+            id="nota"
+            type="number"
+            ref={notaRef}
+            defaultValue={5}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
+          />
+        </div>
+
+        <div className="mb-6">
+          <label 
+            htmlFor="cartelera" 
+            className="block text-sm font-medium text-gray-700 mb-1"
+          >
+            Cartelera:
+          </label>
+          <input 
+            id="cartelera"
+            type="url"
+            ref={carteleraRef} 
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
         </div>
