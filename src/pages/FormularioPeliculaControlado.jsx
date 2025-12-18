@@ -67,7 +67,7 @@ function FormularioPeliculaControlado() {
                 className="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md"
             >
                 <div className="text-2xl font-bold mb-6 text-gray-800 border-b pb-2">
-                    Formulario &quot;Discos&quot;
+                    Formulario &quot;Películas&quot;
                 </div>
 
                 <div className="mb-4">
@@ -89,16 +89,16 @@ function FormularioPeliculaControlado() {
 
                 <div className="mb-6">
                     <label
-                        htmlFor="grupo"
+                        htmlFor="director"
                         className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                        Grupo:
+                        Director:
                     </label>
                     <input
-                        id="grupo"
+                        id="director"
                         type="text"
-                        value={grupo}
-                        onChange={(e) => setGrupo(e.target.value)}
+                        value={director}
+                        onChange={(e) => setDirector(e.target.value)}
                         aria-invalid={!!error}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
                     />
@@ -106,16 +106,16 @@ function FormularioPeliculaControlado() {
 
                 <div className="mb-6">
                     <label
-                        htmlFor="anyoPublicacion"
+                        htmlFor="clasificacion"
                         className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                        Año de Publicación:
+                        Clasificación:
                     </label>
                     <input
-                        id="anyoPublicacion"
+                        id="clasificacion"
                         type="text"
-                        value={anyoPublicacion}
-                        onChange={(e) => setAnyoPublicacion(e.target.value)}
+                        value={clasificacion}
+                        onChange={(e) => setClasificacion(e.target.value)}
                         aria-invalid={!!error}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
                     />
@@ -123,53 +123,50 @@ function FormularioPeliculaControlado() {
 
                 <div className="mb-6">
                     <label
-                        htmlFor="tipoMusica"
+                        htmlFor="recaudacion"
                         className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                        Tipo de Música:
-                    </label>
-                    <select
-                        id="tipoMusica"
-                        value={tipoMusica}
-                        onChange={(e) => setTipoMusica(e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
-                    >
-                        <option value="">--Selecciona un tipo--</option>
-                        <option value="rock">Rock</option>
-                        <option value="progressive">Progressive</option>
-                        <option value="punk">Punk</option>
-                        <option value="trash">Trash</option>
-                    </select>
-                </div>
-
-                <div className="mb-6">
-                    <label
-                        htmlFor="localizacion"
-                        className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                        Localización:
+                        Recaudación:
                     </label>
                     <input
-                        id="localizacion"
+                        id="recaudacion"
                         type="text"
-                        value={localizacion}
-                        onChange={(e) => setLocalizacion(e.target.value)}
+                        value={recaudacion}
+                        onChange={(e) => setRecaudacion(e.target.value)}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
                     />
                 </div>
 
                 <div className="mb-6">
                     <label
-                        htmlFor="prestado"
+                        htmlFor="nota"
                         className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                        Prestado:
+                        Nota:
                     </label>
                     <input
-                        id="prestado"
-                        type="checkbox"
-                        value={prestado}
-                        onChange={(e) => setPrestado(e.target.value)}
+                        id="nota"
+                        type="number"
+                        value={nota}
+                        onChange={(e) => setNota(e.target.value)}
+                        aria-invalid={!!error}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
+                    />
+                </div>
+
+                <div className="mb-6">
+                    <label
+                        htmlFor="cartelera"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                        Cartelera:
+                    </label>
+                    <input
+                        id="cartelera"
+                        type="url"
+                        value={cartelera}
+                        onChange={(e) => setCartelera(e.target.value)}
+                        aria-invalid={!!error}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
                     />
                 </div>
