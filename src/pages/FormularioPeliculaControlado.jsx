@@ -6,11 +6,11 @@ function FormularioPeliculaControlado(){
   //   nombre: "", grupo: "", anyoPublicacion: "", tipoMusica: "", localizacion: "", prestado: false,
   // });
   const [nombre, setNombre] = useState("");
-  const [grupo, setGrupo] = useState("");
-  const [anyoPublicacion, setAnyoPublicacion] = useState("");
-  const [tipoMusica, setTipoMusica] = useState("");
-  const [localizacion, setLocalizacion] = useState("");
-  const [prestado, setPrestado] = useState("");
+  const [director, setDirector] = useState("");
+  const [clasificacion, setClasificacion] = useState("");
+  const [recaudacion, setRecaudacion] = useState("");
+  const [nota, setNota] = useState("");
+  const [cartelera, setCartelera] = useState("");
   const [error, setError] = useState("");
   // const [nombre, setNombre] = useState("");
   // const handleChange = (e) => {
