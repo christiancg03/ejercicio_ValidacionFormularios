@@ -49,11 +49,11 @@ function FormularioPeliculaControlado() {
 
         const formData = {
             nombre,
-            grupo,
-            anyoPublicacion,
-            tipoMusica,
-            localizacion,
-            prestado,
+            director,
+            clasificacion,
+            recaudacion,
+            nota,
+            cartelera,
         };
 
         console.log("Datos enviados:", formData);
