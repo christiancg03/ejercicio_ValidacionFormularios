@@ -6,9 +6,9 @@
  */
 
 import { useState } from "react";
-import FormularioPeliculaControlado from "./FormularioPeliculaControlado";
-import FormularioPeliculaNoControlado from "./FormularioPeliculaNoControlado";
-import FormularioInterprete from "./FormularioInterprete";
+import FormularioPeliculaControlado from "../components/FormularioPeliculaControlado";
+import FormularioPeliculaNoControlado from "../components/FormularioPeliculaNoControlado";
+import FormularioInterprete from "../components/FormularioInterprete";
 
 function Admin() {
   const [formVisible, setFormVisible] = useState("");

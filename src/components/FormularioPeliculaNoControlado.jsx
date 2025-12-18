@@ -10,6 +10,32 @@ function FormularioPeliculaNoControlado() {
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (nombre.length < 5) {
+      alert("El nombre debe tener al menos 5 caracteres");
+      return;
+    }
+
+    if (director.length < 5) {
+      alert("El director debe tener al menos 5 caracteres");
+      return;
+    }
+
+    if (!clasificacion) {
+      alert("La clasificación es obligatoria");
+      return;
+    }
+
+    if (isNaN(nota) || nota < 1 || nota > 10) {
+      alert("La nota debe ser un número entre 1 y 10");
+      return;
+    }
+
+    if (!cartelera.startsWith("http")) {
+      alert("La URL de la cartelera debe empezar por http");
+      return;
+    }
+
     const datos = {
       nombre: nombreRef.current.value,
       director: directorRef.current.value,
@@ -18,12 +44,13 @@ function FormularioPeliculaNoControlado() {
       nota: notaRef.current.value,
       cartelera: carteleraRef.current.value,
     };
+
     console.log("Datos enviados:", datos);
   }
-  
+
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
-      <form 
+      <form
         onSubmit={handleSubmit}
         className="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md"
       >
@@ -32,8 +59,8 @@ function FormularioPeliculaNoControlado() {
         </div>
 
         <div className="mb-4">
-          <label 
-            htmlFor="nombre" 
+          <label
+            htmlFor="nombre"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
             Nombre:
@@ -47,43 +74,43 @@ function FormularioPeliculaNoControlado() {
         </div>
 
         <div className="mb-6">
-          <label 
-            htmlFor="director" 
+          <label
+            htmlFor="director"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
             Director:
           </label>
-          <input 
+          <input
             id="director"
             type="text"
-            ref={directorRef} 
+            ref={directorRef}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
         </div>
 
         <div className="mb-6">
-          <label 
-            htmlFor="clasificacion" 
+          <label
+            htmlFor="clasificacion"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
             Clasificación:
           </label>
-          <input 
+          <input
             id="clasificacion"
             type="text"
-            ref={clasificacionRef} 
+            ref={clasificacionRef}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
         </div>
 
         <div className="mb-6">
-          <label 
-            htmlFor="recaudacion" 
+          <label
+            htmlFor="recaudacion"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
             Recaudación:
           </label>
-          <input 
+          <input
             id="recaudacion"
             type="text"
             ref={recaudacionRef}
@@ -92,13 +119,13 @@ function FormularioPeliculaNoControlado() {
         </div>
 
         <div className="mb-6">
-          <label 
-            htmlFor="nota" 
+          <label
+            htmlFor="nota"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
             Nota:
           </label>
-          <input 
+          <input
             id="nota"
             type="number"
             ref={notaRef}
@@ -108,22 +135,22 @@ function FormularioPeliculaNoControlado() {
         </div>
 
         <div className="mb-6">
-          <label 
-            htmlFor="cartelera" 
+          <label
+            htmlFor="cartelera"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
             Cartelera:
           </label>
-          <input 
+          <input
             id="cartelera"
             type="url"
-            ref={carteleraRef} 
+            ref={carteleraRef}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
         </div>
 
         <div>
-          <button 
+          <button
             type="submit"
             className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
           >
