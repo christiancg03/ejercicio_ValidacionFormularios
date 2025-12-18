@@ -15,27 +15,26 @@ function FormularioPeliculaControlado(){
       setError("El nombre debe contener al menos 5 caracteres.");
       return;
     }
-    if (grupo.length < 5) {
-      setError("El nombre del grupo debe contener al menos 5 caracteres.");
+    if (biografia.length < 50) {
+      setError("La biografía debe contener al menos 50 caracteres.");
       return;
     }
-    if (anyoPublicacion.length !== 4 || isNaN(anyoPublicacion)) {
-      setError("El año debe tener 4 caracteres numéricos.");
+    if (!pelicula) {
+      setError("Debes seleccionar una película.");
       return;
     }
-    if (!tipoMusica) {
-      setError("Debes seleccionar un tipo de música.");
-      return;
-    }
+    if (!imagen.startsWith("http")) {
+            setError("La URL de la imagen debe empezar por http.");
+            return;
+        }
     setError("");
 
     const formData = {
+      pelicula,
       nombre,
-      grupo,
-      anyoPublicacion,
-      tipoMusica,
-      localizacion,
-      prestado,
+      fechaNacimiento,
+      biografia,
+      imagen,
     };
 
     console.log("Datos enviados:", formData);
