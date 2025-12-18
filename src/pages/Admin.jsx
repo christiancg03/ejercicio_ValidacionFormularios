@@ -5,6 +5,11 @@
  * @returns {JSX.Element} The rendered admin panel with a heading and description.
  */
 
+import { useState } from "react";
+import FormularioPeliculaControlado from "./FormularioPeliculaControlado";
+import FormularioPeliculaNoControlado from "./FormularioPeliculaNoControlado";
+import FormularioInterprete from "./FormularioInterprete";
+
 function Admin() {
   return (
     <>
