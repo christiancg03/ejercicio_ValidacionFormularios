@@ -2,9 +2,6 @@ import { useState } from 'react';
 
 function FormularioPeliculaControlado() {
 
-    // const [formData, setFormData] = useState({
-    //   nombre: "", grupo: "", anyoPublicacion: "", tipoMusica: "", localizacion: "", prestado: false,
-    // });
     const [nombre, setNombre] = useState("");
     const [director, setDirector] = useState("");
     const [clasificacion, setClasificacion] = useState("");
@@ -12,16 +9,6 @@ function FormularioPeliculaControlado() {
     const [nota, setNota] = useState("");
     const [cartelera, setCartelera] = useState("");
     const [error, setError] = useState("");
-    // const [nombre, setNombre] = useState("");
-    // const handleChange = (e) => {
-    //   console.log(formData); // Para ver el estado en cada cambio
-
-    //   const { id, value } = e.target;
-    //   setFormData((prev) => ({
-    //     ...prev,
-    //     [id]: value,
-    //   }));
-    // };
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -67,7 +54,7 @@ function FormularioPeliculaControlado() {
                 className="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md"
             >
                 <div className="text-2xl font-bold mb-6 text-gray-800 border-b pb-2">
-                    Formulario &quot;Películas&quot;
+                    Formulario Controlado&quot;Películas&quot;
                 </div>
 
                 <div className="mb-4">
