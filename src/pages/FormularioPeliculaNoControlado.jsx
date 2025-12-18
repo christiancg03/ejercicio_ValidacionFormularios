@@ -2,7 +2,11 @@ import { useRef } from 'react';
 
 function FormularioPeliculaNoControlado() {
   const nombreRef = useRef(null);
-  const emailRef = useRef(null);
+  const directorRef = useRef(null);
+  const clasificacionRef = useRef(null);
+  const recaudacionRef = useRef(null);
+  const notaRef = useRef(null);
+  const carteleraRef = useRef(null);
 
   function handleSubmit(e) {
     e.preventDefault();
