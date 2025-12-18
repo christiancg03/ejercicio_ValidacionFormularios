@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import peliculas from '../data/peliculas';
 
-function FormularioPeliculaControlado(){
+function FormularioInterprete(){
 
   const [pelicula, setPelicula] = useState("");
   const [nombre, setNombre] = useState("");
@@ -93,66 +93,57 @@ function FormularioPeliculaControlado(){
 
         <div className="mb-6">
           <label
-            htmlFor="grupo"
+            htmlFor="fechaNacimiento"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
-            Grupo:
+            Fecha de Nacimiento:
           </label>
           <input
-            id="grupo"
-            type="text"
-            value={grupo}
-            onChange={(e) => setGrupo(e.target.value)}
-            aria-invalid={!!error}
+            id="fechaNacimiento"
+            type="date"
+            value={fechaNacimiento}
+            onChange={(e) => setFechaNacimiento(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
         </div>
 
         <div className="mb-6">
           <label
-            htmlFor="anyoPublicacion"
+            htmlFor="biografia"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
-            Año de Publicación:
+            Biografía:
           </label>
-          <input
-            id="anyoPublicacion"
+          <textarea 
+            id="biografia"
+            value={biografia}
+            onChange={(e) => setBiografia(e.target.value)}
+            aria-invalid={!!error}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
+           />
+
+          {/* <input
+            id="biografia"
             type="text"
             value={anyoPublicacion}
             onChange={(e) => setAnyoPublicacion(e.target.value)}
             aria-invalid={!!error}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
-          />
+          /> */}
         </div>
 
         <div className="mb-6">
           <label
-            htmlFor="localizacion"
+            htmlFor="imagen"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
-            Localización:
+            Imagen:
           </label>
           <input
-            id="localizacion"
-            type="text"
-            value={localizacion}
-            onChange={(e) => setLocalizacion(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
-          />
-        </div>
-
-        <div className="mb-6">
-          <label
-            htmlFor="prestado"
-            className="block text-sm font-medium text-gray-700 mb-1"
-          >
-            Prestado:
-          </label>
-          <input
-            id="prestado"
-            type="checkbox"
-            value={prestado}
-            onChange={(e) => setPrestado(e.target.value)}
+            id="imagen"
+            type="url"
+            value={imagen}
+            onChange={(e) => setImagen(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
         </div>
@@ -177,4 +168,4 @@ function FormularioPeliculaControlado(){
 
 }
 
-export default FormularioPeliculaControlado;
+export default FormularioInterprete;
