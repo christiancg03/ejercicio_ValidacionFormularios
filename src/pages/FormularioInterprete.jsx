@@ -121,15 +121,6 @@ function FormularioInterprete(){
             aria-invalid={!!error}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
            />
-
-          {/* <input
-            id="biografia"
-            type="text"
-            value={anyoPublicacion}
-            onChange={(e) => setAnyoPublicacion(e.target.value)}
-            aria-invalid={!!error}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
-          /> */}
         </div>
 
         <div className="mb-6">
