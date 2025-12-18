@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import peliculas from '../data/peliculas';
 
 function FormularioPeliculaControlado(){
 
@@ -48,7 +49,29 @@ function FormularioPeliculaControlado(){
         className="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md"
       >
         <div className="text-2xl font-bold mb-6 text-gray-800 border-b pb-2">
-          Formulario &quot;Discos&quot;
+          Formulario Controlado&quot;Intérpretes&quot;
+        </div>
+
+        <div className="mb-6">
+          <label
+            htmlFor="pelicula"
+            className="block text-sm font-medium text-gray-700 mb-1"
+          >
+            Película:
+          </label>
+          <select
+            id="pelicula"
+            value={pelicula}
+            onChange={(e) => setPelicula(e.target.value)}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
+          >
+            <option value="">--Selecciona una película--</option>
+            {peliculas.map((p) => (
+                <option key={p.id} value={p.nombre}>
+                    {p.nombre}
+                </option>
+            ))}
+          </select>
         </div>
 
         <div className="mb-4">
@@ -100,27 +123,6 @@ function FormularioPeliculaControlado(){
             aria-invalid={!!error}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
-        </div>
-
-        <div className="mb-6">
-          <label
-            htmlFor="tipoMusica"
-            className="block text-sm font-medium text-gray-700 mb-1"
-          >
-            Tipo de Música:
-          </label>
-          <select
-            id="tipoMusica"
-            value={tipoMusica}
-            onChange={(e) => setTipoMusica(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
-          >
-            <option value="">--Selecciona un tipo--</option>
-            <option value="rock">Rock</option>
-            <option value="progressive">Progressive</option>
-            <option value="punk">Punk</option>
-            <option value="trash">Trash</option>
-          </select>
         </div>
 
         <div className="mb-6">
