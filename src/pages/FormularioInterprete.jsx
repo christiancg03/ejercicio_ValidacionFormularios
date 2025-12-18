@@ -2,26 +2,12 @@ import { useState } from 'react';
 
 function FormularioPeliculaControlado(){
 
-// const [formData, setFormData] = useState({
-  //   nombre: "", grupo: "", anyoPublicacion: "", tipoMusica: "", localizacion: "", prestado: false,
-  // });
+  const [pelicula, setPelicula] = useState("");
   const [nombre, setNombre] = useState("");
-  const [grupo, setGrupo] = useState("");
-  const [anyoPublicacion, setAnyoPublicacion] = useState("");
-  const [tipoMusica, setTipoMusica] = useState("");
-  const [localizacion, setLocalizacion] = useState("");
-  const [prestado, setPrestado] = useState("");
+  const [fechaNacimiento, setFechaNacimiento] = useState("");
+  const [biografia, setBiografia] = useState("");
+  const [imagen, setImagen] = useState("");
   const [error, setError] = useState("");
-  // const [nombre, setNombre] = useState("");
-  // const handleChange = (e) => {
-  //   console.log(formData); // Para ver el estado en cada cambio
-
-  //   const { id, value } = e.target;
-  //   setFormData((prev) => ({
-  //     ...prev,
-  //     [id]: value,
-  //   }));
-  // };
 
   function handleSubmit(e) {
     e.preventDefault();
